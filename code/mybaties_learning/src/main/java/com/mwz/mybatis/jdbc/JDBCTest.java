@@ -1,4 +1,4 @@
-package com.mwz.mybaties.jdbc;
+package com.mwz.mybatis.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
