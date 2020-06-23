@@ -1,4 +1,4 @@
-package com.mwz.mybatis;
+package com.mwz.mybatis.dao;
 
 import java.util.Date;
 

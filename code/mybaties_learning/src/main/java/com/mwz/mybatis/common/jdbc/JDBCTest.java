@@ -1,4 +1,4 @@
-package com.mwz.mybatis.jdbc;
+package com.mwz.mybatis.common.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,7 +26,7 @@ public class JDBCTest {
             String sql = "select * from db_user where id=?";
             prepareStatement = connection.prepareStatement(sql);
             // 设置参数
-            prepareStatement.setString(1, "001");
+            prepareStatement.setString(1, "003");
             // 执行查询
             rs = prepareStatement.executeQuery();
             // 处理结果集
