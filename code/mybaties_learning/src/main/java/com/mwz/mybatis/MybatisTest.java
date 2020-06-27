@@ -1,6 +1,7 @@
 package com.mwz.mybatis;
 
 import com.mwz.mybatis.dao.User;
+import com.mwz.mybatis.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -19,9 +20,16 @@ public class MybatisTest {
         // 获取sqlSession
         SqlSession sqlSession = sqlSessionFactory.openSession();
         try {
+
+            //方法一
             // 操作CRUD，第一个参数：指定statement，规则：命名空间+“.”+statementId
             // 第二个参数：指定传入sql的参数：这里是用户id
-            User user = sqlSession.selectOne("MyMapper.selectUser", 002);
+            User user = sqlSession.selectOne("com.mwz.mybatis.mapper.UserMapper.selectUser", 002);
+
+            //方法二，最终还是调用方法一
+//            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+//            User user = userMapper.selectUser("002");
+
             System.out.println(user.getUser_name());
         } finally {
             sqlSession.close();
