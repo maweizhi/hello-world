@@ -19,7 +19,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <!--mysql安装的是8.0+的版本，jdbc驱动包用5.1.*不兼容，改成8.0.11-->
             <!--version>5.1.32</version-->
-            <version>8.0.11</version>
+            <version>8.0.16</version>
         </dependency>
         <!--mybatis依赖包-->
         <dependency>
